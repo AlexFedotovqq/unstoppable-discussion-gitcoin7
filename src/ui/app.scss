@@ -1,0 +1,77 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.rotating-icon {
+    display: inline-block;
+    animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes twist-up {
+    to {
+        transform: rotateX(360deg);
+    }
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    hr {
+        width: 50vw;
+    }
+
+    .nav {
+        color: white;
+        background-color: #696d7d;
+        width: 100vw;
+        padding: 0.8rem;
+        margin-right: 0.7rem;
+        display: flex;
+        justify-content: space-between;
+
+        .accounts,
+        .balance {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    .show-topics {
+        margin-right: 1rem;
+        display: grid;
+        grid-gap: 1rem;
+        max-width: 25vw;
+        grid-template-columns: repeat(2, 1fr);
+
+        .topic {
+            border: 1px solid rgb(226, 226, 226);
+            padding: 1rem;
+        }
+        button {
+            background-color: #696d7d;
+            color: white;
+            font-weight: bold;
+        }
+    }
+}
+
+input {
+    padding: 1rem;
+}
+
+button {
+    padding: 0.4rem;
+    background-color: #6f9283;
+    &:hover {
+        cursor: pointer;
+    }
+}
